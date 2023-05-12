@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('fonts/gteestiprodisplay_light.otf');
+}    
+body{
+    margin: 0;
+    min-width:300px;
+
+    background: #000;
+    color: #FFF;
+    padding: 0 3em;
+    font-family: MyWebFont;
+    
+    
+}
+
+
+
+.page{
+    margin: 2em auto;
+    max-width: 80em;
+}
+.logo a{
+    font-size: 1.3em;
+
+}
+.header{
+    display: flex;
+    
+    align-items: center;
+
+}
+.header_menu a:hover{
+    text-decoration: underline #FFF;
+    transition: 1s;
+}
+.header_menu a::before{
+    
+    transition: 1s;
+}
+.header div:last-child{
+    margin-left: auto;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:7em;
+}
+.heading h1{
+    text-align: center;
+}
+.heading_tabs{
+    display: flex;
+    margin: 2em 0em;
+}
+.heading_tabs div{
+    margin: 0 1em;
+}
+
+
+
+
+a{
+    text-decoration: none;
+    color: #FFF;
+    width: 2em;
+}
+.button{
+    border: 1px solid #FFF;
+    color: #FFF;
+    background-color:#000;
+    
+    border-radius: 2em;
+    padding: 1em 3em;
+    margin: 0 2em;
+    
+}
+.button:hover{
+    background: #FFF;
+    color:#000;
+}
+.button_accent{
+    background: black;
+}
+.button a{
+    text-decoration: none;
+    outline: none;
+    width: max-content;
+    height: max-content;
+    
+}
+.button a:hover{
+    color:#000
+}
+.button_accent a{
+    color: white;
+}
+.work_grid{
+    display: grid;
+    
+    grid-template-columns: repeat(3,1fr);
+
+    margin: 4em 0;
+    column-gap:  50px;
+}
+.image_placehold{
+    background-color: #FFF;
+    border-radius: 1.3em;
+    width: auto;
+    height: 20em;
+    
+}
+.grid-el{
+
+}
+.make_order{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
