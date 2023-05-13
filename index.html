@@ -1,6 +1,7 @@
 <html>
     <head>
         <link href="style.css" rel="stylesheet">
+        
     </head>
     <body>
         <div class="page">
@@ -15,36 +16,61 @@
             <div class="heading">
                 <h1>Привет, меня зовут Илья <br> и это мое портфолио</h1>
                 <div class="heading_tabs">
-                    <button class="button">landing</button>
-                    <button class="button">карточки вб</button>
+                    <button class="button tab_button" id="defaultOpen" onclick="openTab(event, 'landing')">landing</button>
+                    <button class="button tab_button" onclick="openTab(event, 'wb_cards')">карточки вб</button>
 
                 </div>
             </div>
-            <div class="work_grid">
-                <div class="grid-el">
-                    <h2>Название работы</h2>
-                    <h2>описание</h2>
-                    <div class="image_placehold"></div>
+            <div class="work_container">
+                <div class="work_grid" id="landing">
+                    <div class="grid-el">
+                        <h2>Название работы</h2>
+                        <h2>описание</h2>
+                        <div class="image_placehold"></div>
+                    </div>
+                    <div class="grid-el">
+                        <h2>Название работы</h2>
+                        <h2>описание</h2>
+                        <div class="image_placehold"></div>
+                    </div>
+                    <div class="grid-el">
+                        <h2>Название работы</h2>
+                        <h2>описание</h2>
+                        <div class="image_placehold"></div>
+                    </div>
+                    <div class="grid-el">
+                        <h2>Название работы</h2>
+                        <h2>описание</h2>
+                        <div class="image_placehold"></div>
+                    </div>
                 </div>
-                <div class="grid-el">
-                    <h2>Название работы</h2>
-                    <h2>описание</h2>
-                    <div class="image_placehold"></div>
-                </div>
-                <div class="grid-el">
-                    <h2>Название работы</h2>
-                    <h2>описание</h2>
-                    <div class="image_placehold"></div>
-                </div>
-                <div class="grid-el">
-                    <h2>Название работы</h2>
-                    <h2>описание</h2>
-                    <div class="image_placehold"></div>
+                <div class="work_grid" id="wb_cards">
+                    <div class="grid-el">
+                        <h2>HEADER2</h2>
+                        <h2>описание</h2>
+                        <div class="image_placehold"></div>
+                    </div>
+                    <div class="grid-el">
+                        <h2>Название работы</h2>
+                        <h2>описание</h2>
+                        <div class="image_placehold"></div>
+                    </div>
+                    <div class="grid-el">
+                        <h2>Название работы</h2>
+                        <h2>описание</h2>
+                        <div class="image_placehold"></div>
+                    </div>
+                    <div class="grid-el">
+                        <h2>Название работы</h2>
+                        <h2>описание</h2>
+                        <div class="image_placehold"></div>
+                    </div>
                 </div>
             </div>
             <div class="make_order">
                 <button class="button">Сделать заказ</button>
             </div>    
         </div>
+        <script src="script.js"></script>    
     </body>
 </html>

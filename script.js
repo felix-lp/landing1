@@ -1,29 +1,23 @@
 
 
-// получаем массив всех вкладок
-const tabs = document.querySelectorAll(".heading_tabs.button");
-// получаем массив всех блоков с содержимым вкладок
-const contents = document.querySelectorAll(".content");
- 
-// запускаем цикл для каждой вкладки и добавляем на неё событие
-for (let i = 0; i < tabs.length; i++) {
-	tabs[i].addEventListener("click", ( event ) => {
- 
-		// сначала нам нужно удалить активный класс именно с вкладок
-		let tabsChildren = event.target.parentElement.children;
-		for (let t = 0; t < tabsChildren.length; t++) {
-			tabsChildren[t].classList.remove("tab--active");
-		}
-		// добавляем активный класс
-		tabs[i].classList.add("tab--active");
-		// теперь нужно удалить активный класс с блоков содержимого вкладок
-		let tabContentChildren = event.target.parentElement.nextElementSibling.children;
-		for (let c = 0; c < tabContentChildren.length; c++) {
-			tabContentChildren[c].classList.remove("content--active");
-		}
-		// добавляем активный класс
-		contents[i].classList.add("content--active");
- 
-	});
-}
+function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
 
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("work_grid");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tab_button");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "grid";
+    evt.currentTarget.className += " active";
+} 
+document.getElementById("defaultOpen").click();
